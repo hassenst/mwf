@@ -1,0 +1,64 @@
+/* TODO: add any application specific styling here */
+main li img {
+  height: var(--var-mwf-listitem-imgsize);
+  object-fit: cover;
+}
+#mediaReadview img {
+  width: 100%;
+  max-width: 100%;
+}
+
+button:disabled,
+.mwf-disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+#scope {
+  line-height: 40px;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.has-padding {
+  padding: 10px;
+}
+
+form img {
+  max-width: 100%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+li img {
+  background: #000;
+}
+
+.rel {
+  position: relative;
+  height: 100%;
+}
+
+.rel::after {
+  content: '';
+  background-image: url(../lib/css/img/glyphicons/png/glyphicons-174-play.png);
+  filter: invert(90%);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 55% 50%;
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 20px;
+  height: 20px;
+  z-index: 5;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+.mwf-dialog.mwf-listitem-menu p {
+  color: #fff;
+}
