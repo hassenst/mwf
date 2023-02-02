@@ -31,8 +31,18 @@ export default class EditviewViewController extends mwf.ViewController {
 
     //Clone Object
     if (this.mediaItem.created) {
-      this.editForm.src.blur();
-      this.clone = { ...this.mediaItem };
+      const { src, description, title, contentType } = {
+        ...this.mediaItem,
+      };
+
+      this.clone = {
+        src: src,
+        description: description,
+        title: title,
+        contentType: contentType,
+      };
+
+      console.log('Clone: ', this.clone);
     }
 
     //get currentCrudScope
@@ -155,7 +165,11 @@ export default class EditviewViewController extends mwf.ViewController {
     //console.log('CloneDataBack: ', this.clone);
     this.editForm.reset();
     if (this.clone) {
-      this.mediaItem = this.clone;
+      this.mediaItem.src = this.clone.src;
+      this.mediaItem.title = this.clone.title;
+      this.mediaItem.contentType = this.clone.contentType;
+      this.mediaItem.description = this.clone.description;
+
       this.viewProxy.update(this.mediaItem);
 
       console.log('MediaItemBack: ', this.mediaItem);
