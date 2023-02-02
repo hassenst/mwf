@@ -52,7 +52,8 @@ export default class EditviewViewController extends mwf.ViewController {
 
     //Disable Fileupload on local
     if (this.currentCrudScope == 'local') {
-      this.fileLabel.classList.toggle('mwf-disabled');
+      //Hide/disable FileUpload Label on local
+      this.fileLabel.style.display = 'none';
     }
 
     //Vorschaubild
