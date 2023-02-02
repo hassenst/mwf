@@ -1,5 +1,7 @@
 /* TODO: add any application specific styling here */
-main li img {
+main li img,
+main li video {
+  width: var(--var-mwf-listitem-imgsize);
   height: var(--var-mwf-listitem-imgsize);
   object-fit: cover;
 }
